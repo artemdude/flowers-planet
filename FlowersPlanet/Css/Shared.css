@@ -1,0 +1,70 @@
+﻿body
+{
+    font-family: arial, Helvetica, sans-serif;
+     font-size:12px;
+     color:#949494;
+}
+
+.clear
+{
+    clear:both;
+}
+
+
+
+ul
+{
+  padding:0;
+  margin:0;
+}
+
+table{
+border:0px; /* border="0" */
+border-collapse:collapse; /* cellspacing="0" */
+}
+
+table td{
+padding:0px; /* cellpadding="0" */
+vertical-align:top;
+}
+
+a
+{
+     text-decoration: underline;
+     color:#949494;
+}
+
+a:hover
+{
+    color: #cc0000;
+}
+
+.fLeft
+{
+     float:left;
+}
+
+.fRight
+{
+     float:right;
+}
+
+.left
+{
+     text-align:left;
+}
+
+.right
+{
+     text-align:right;
+}
+
+.uppercase
+{
+     text-transform:uppercase;
+}
+
+img
+{
+     border:0;
+}

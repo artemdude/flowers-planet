@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <link type="image/x-icon" href="<%= ResolveUrl("~/Images/Admin/favicon.ico") %>"  rel="shortcut icon" />
+   
+    <link href="<%= ResolveUrl("~/Css/Shared.css") %>" rel="stylesheet" type="text/css" />
+    <script src="<%= ResolveUrl("~/Scripts/plugins/jquery-last.js") %>" type="text/javascript"></script>
+
+    <script src="<%= ResolveUrl("~/Scripts/plugins/fixedElement.js") %>" type="text/javascript"></script>
+
+    <link href="<%= ResolveUrl("~/Css/Admin/main.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= ResolveUrl("~/Css/spaces.css") %>" rel="stylesheet" type="text/css" />
+
+    <script src="<%= ResolveUrl("~/Scripts/plugins/jquery.boxFocus.js") %>" type="text/javascript"></script>
+
+    
+    <script src="<%= ResolveUrl("~/Scripts/plugins/validation/jquery.validate.min.js") %>" type="text/javascript"></script>
+
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <a href='<%= Url.Action("Index") %>'>
+                            <img src="<%= ResolveUrl("~/Images/Admin/logo.png") %>" alt="JunkyStudio" /></a>
+                    </td>
+                    <td style="width: 400px;">
+                        <div id="headerMenu">
+                            <a href="<%= Url.Action("FlowerManage") %>">Новый цветок</a>|<a href="<%= Url.Action("MenuManage") %>">Новое меню</a>|<a href="<%= Url.Action("TagManage") %>">Новый тэг</a>
+                        </div>
+                    </td>
+                    <td style="width: 100px;">
+                        <div id="userMenu">
+                            <%= Html.ActionLink("Выход", "LogOff", "Account") %>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="height: 80px;">
+        </div>
+        <div id="mainContainer">
+            <div style="float: left; width: 900px">
+                <div style="" id="content">
+                    <div id="main-menu">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li><a id="menuFlowers" href="<%= Url.Action("Flowers") %>">Цветы</a></li>
+                                        <li><a id="menuMenus" href="<%= Url.Action("Menus") %>">Разделы</a></li>
+                                        <li><a id="menuTags" href="<%= Url.Action("Tags") %>">Тэги</a></li>
+                                    </ul>
+                                </td>
+                                <td width="50%" style="text-align: right;">
+                                    <ul>
+                                        <li id="liHome" style="float: right;"><a style="padding-left: 20px; margin-right: 0; border-bottom-color: #fff;"
+                                            href='<%= Url.RouteUrl("Index") %>'>
+                                            <div class="adm-menu-home adm-menu">
+                                            </div>
+                                            Вернутся на сайт </a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div id="body" class="block corners-bottom">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div id="footer">
+                        © FlowersPlanet
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

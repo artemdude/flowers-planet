@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c7a0e0d6-770a-4152-a794-a5eece7ea685" absoluteBounds="3.625, 0.875, 2, 2.0822371419270826">
+      <DataClassMoniker Name="/DataClassesDataContext/Tag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1fe123a6-2e00-43dd-9852-80cfa0b4f9df" absoluteBounds="3.64, 1.335, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91cc9c9e-a6ee-4589-9fc9-89fc9a630336" absoluteBounds="0.875, 1, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/DataClassesDataContext/Menu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bee9ace3-217e-4ba2-ae19-211a258f116f" absoluteBounds="0.89, 1.46, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe516811-a40b-48bb-8a6b-07edf8908150" absoluteBounds="6.375, 1.375, 2, 1.2605004882812503">
+      <DataClassMoniker Name="/DataClassesDataContext/FlowerInTag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="547ea492-42a9-40d0-8c89-4b392eae96e4" absoluteBounds="6.39, 1.835, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 1.95894490559896); (3.625 : 1.95894490559896)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Menu/Menu_Tag" />
+      <nodes>
+        <classShapeMoniker Id="91cc9c9e-a6ee-4589-9fc9-89fc9a630336" />
+        <classShapeMoniker Id="c7a0e0d6-770a-4152-a794-a5eece7ea685" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 2.00525024414063); (6.375 : 2.00525024414063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesDataContext/Tag/Tag_FlowerInTag" />
+      <nodes>
+        <classShapeMoniker Id="c7a0e0d6-770a-4152-a794-a5eece7ea685" />
+        <classShapeMoniker Id="fe516811-a40b-48bb-8a6b-07edf8908150" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4d9e594c-d1b6-4d68-bc99-5b0fabc319fd" absoluteBounds="5.875, 4.125, 2, 2.73962646484375">
+      <DataClassMoniker Name="/DataClassesDataContext/Flower" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62614751-7d2b-49d7-8a7f-e1164912edeb" absoluteBounds="5.89, 4.585, 1.9700000000000002, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.125 : 4.125); (7.125 : 2.63550048828125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Flower/Flower_FlowerInTag" />
+      <nodes>
+        <classShapeMoniker Id="4d9e594c-d1b6-4d68-bc99-5b0fabc319fd" />
+        <classShapeMoniker Id="fe516811-a40b-48bb-8a6b-07edf8908150" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

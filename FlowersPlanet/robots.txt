@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /order/
+Host: www.flowersplanet.com.ua

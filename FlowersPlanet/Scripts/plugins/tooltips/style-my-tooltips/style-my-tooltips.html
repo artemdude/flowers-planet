@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>style-my-tootltips demo</title>
+<style type="text/css">
+<!--
+/*stylesheet for this demo*/
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+body{margin:0; padding:0; background:#c3d3d5; font-family:Verdana, Geneva, sans-serif; font-size:13px; color:#333; line-height:20px;}
+a:link,a:visited{color:#000; text-decoration:none; background:#f9e5b7; font-size:15px; font-family:Georgia, "Times New Roman", Times, serif; text-shadow:0px 0px 0px #fff;}
+a:hover{color:#f9e5b7; background:#d11c24;}
+.topleft,.topright,.bottomleft,.bottomright{position:absolute; margin:20px;}
+.topleft{top:0; left:0;}
+.topright{top:0; right:0;}
+.bottomleft{bottom:0; left:0;}
+.bottomright{bottom:0; right:0;}
+.center{position:relative; width:400px; margin:60px auto;}
+.center p img{float:left; margin:5px 15px 0 0;}
+h1,p{text-shadow:1px 1px 1px #fff;}
+h1{font-size:36px; font-family:"Lobster", Georgia, "Times New Roman", Times, serif; color:#d11c24;}
+-->
+</style>
+<link href="style-my-tooltips.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.style-my-tooltips.js"></script>
+<script type="text/javascript">  
+$().ready(function() {  
+	//applies to all elements with title attribute. Change to ".class[title]" to select only elements with specific .class and title
+	$("[title]").style_my_tooltips({ 
+		tip_follows_cursor: "on", //on/off
+		tip_delay_time: 1000 //milliseconds
+	});  
+});  
+</script>  
+</head>
+
+<body>
+<div class="center">
+<h1>Style-my-tooltips demo</h1>
+<p>Style native browser tooltips easily with <strong>Style-My-Tooltips</strong> <a href="http://jquery.com/" title="Go to jQuery website (this link has class) so you can check it with specific classes..." target="_blank" class="class">jQuery</a> plugin. A very simple script to enhance the look of tooltips. It works just like browser's native tooltips with few options and styling via CSS. By default, the script affects any element with a "title" attribute like <a href="#" title="Link title...">links</a>, paragraphs, images etc. but you can easily set it to affect only specific classes.</p>
+<p><img src="a_thumb.jpg" width="200" height="150" title="Obey the kitty!" /></p>
+<p>&larr; Hover your cursor over the image to see its title.</p>
+<p title="a paragraph title">Hover your cursor over this paragraph to see its tooltip.</p>
+<p><a href="http://manos.malihu.gr/style-my-tooltips-jquery-plugin" title="Go to original post at manos.malihu.gr">Plugin homepage</a><br /><a href="http://manos.malihu.gr/tuts/style-my-tooltips.zip" title="Download the plugin">Download it</a></p>
+</div>
+<div class="topleft">
+<a href="#" title="This tooltip should appear just below your cursor, which is the default position as with native browser tooltips.">Hover me!</a> 
+</div>
+<div class="topright">
+<a href="#" title="This tooltip should appear below, as well as left of your cursor since the link is near the right end of the page. If this text was short enough, tooltip should appear right of your cursor.">Hover me!</a> 
+</div>
+<div class="bottomleft">
+<a href="#" title="This tooltip should appear above your cursor since the link is near the bottom of the page.">Hover me!</a> 
+</div>
+<div class="bottomright">
+<a href="#" title="This tooltip should appear above, as well as left of your cursor since the link is near the bottom-right end of the page. If this text was short enough to fit inside the right end of browser window, tooltip should appear right of your cursor.">Hover me!</a> 
+</div>
+</body>
+</html>
